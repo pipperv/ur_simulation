@@ -79,12 +79,13 @@ def launch_setup(context, *args, **kwargs):
             "prefix": prefix,
             "use_sim_time": "true",
             "launch_rviz": "false",
-            "use_mock_hardware": "true",  # to change moveit default controller to joint_trajectory_controller
+            "use_fake_hardware": "true",  # to change moveit default controller to joint_trajectory_controller
         }.items(),
     )
 
     nodes_to_launch = [
         ur_moveit_launch,
+        #ur_control_launch,
     ]
 
     return nodes_to_launch
